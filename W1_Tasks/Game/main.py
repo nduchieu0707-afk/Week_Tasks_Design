@@ -9,7 +9,7 @@ def simulate_battle():
     print("="*50)
     
     for c in characters:
-        print(f"\n🎮 {c.name} turn:")
+        print(f"\n {c.name} turn:")
         print(c.attack())  # ABSTRACT METHOD IMPLEMENTATION
         print(c.defend())  # ABSTRACT METHOD IMPLEMENTATION
 
@@ -23,9 +23,9 @@ while True:
         choice = input("Choose: ")
         
         if choice == "1":
-            print("\n1. Warrior ⚔️")
-            print("2. Mage 🔮")
-            print("3. Archer 🏹")
+            print("\n1. Warrior")
+            print("2. Mage")
+            print("3. Archer")
             
             classes = input("Class: ")
             name = input("Name: ")
@@ -40,7 +40,7 @@ while True:
                 print(" No Extra class!")
                 continue
                 
-            print(f"✅ Created {name} the {['Warrior','Mage','Archer'][int(classes)-1]}")
+            print(f" Created {name} the {['Warrior','Mage','Archer'][int(classes)-1]}")
         
         elif choice == "2":
             if not characters:
@@ -56,4 +56,5 @@ while True:
             print(" Invalid choice!")
     
     except Exception as e:
+
         print(f" Error: {e}")
