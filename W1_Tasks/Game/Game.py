@@ -15,21 +15,22 @@ class GameCharacter(ABC):
 
 class Warrior(GameCharacter):
     def attack(self):
-        return f"⚔️ {self.name} swings a sword for 30 damage!"
+        return f"{self.name} swings a sword for 30 damage!"
     
     def defend(self):
-        return f"🛡️ {self.name} raises shield, defense +20"
+        return f"{self.name} raises shield, defense +20"
 
 class Mage(GameCharacter):
     def attack(self):
-        return f"🔮 {self.name} casts fireball for 40 damage!"
+        return f"{self.name} casts fireball for 40 damage!"
     
     def defend(self):
-        return f"✨ {self.name} creates magic barrier, defense +15"
+        return f"{self.name} creates magic barrier, defense +15"
 
 class Archer(GameCharacter):
     def attack(self):
-        return f"🏹 {self.name} shoots arrows for 25 damage!"
+        return f"{self.name} shoots arrows for 25 damage!"
     
     def defend(self):
-        return f"💨 {self.name} dodges quickly, defense +10"
+
+        return f"{self.name} dodges quickly, defense +10"
