@@ -1,36 +1,41 @@
 from abc import ABC, abstractmethod
 
-class GameCharacter(ABC):
+class Characters(ABC):
     def __init__(self, name):
         self.name = name
         self.health = 100
-    
+
     @abstractmethod
     def attack(self):
         pass
-    
+
     @abstractmethod
     def defend(self):
         pass
 
-class Warrior(GameCharacter):
+class Archer(Characters):
     def attack(self):
-        return f"{self.name} swings a sword for 30 damage!"
+        self.damagearcher = 30
+        return (f"{self.name} attack with damage {self.damagearcher}")
+
+    def defend(self):
+        self.defendarcher = 10
+        return (f"{self.name} defend with plot {self.defendarcher}")
+    
+class Saber(Characters):
+    def attack(self):
+        self.attacksaber = 25
+        return (f"{self.name} attack with damage {self.attacksaber}")
     
     def defend(self):
-        return f"{self.name} raises shield, defense +20"
-
-class Mage(GameCharacter):
-    def attack(self):
-        return f"{self.name} casts fireball for 40 damage!"
+        self.defendsaber = 15
+        return (f"{self.name} defend with plot {self.defendsaber}")
     
-    def defend(self):
-        return f"{self.name} creates magic barrier, defense +15"
-
-class Archer(GameCharacter):
+class Caster(Characters):
     def attack(self):
-        return f"{self.name} shoots arrows for 25 damage!"
-    
+        self.attackcaster = 10
+        return (f"{self.name} attack with damage {self.attackcaster}")
     def defend(self):
-
-        return f"{self.name} dodges quickly, defense +10"
+        self.defendcaster = 30
+        return (f"{self.name} defend with plot {self.defendcaster}")
+    
